@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If1 ovingsoppgaver</title>
+</head>
+<body>
+    <p id="name"></p>
+    <script>
+        const firstName = "Oskar Linus "
+        const lastName = "Holone"
+        let message = ""
+
+        if(firstName === "Oskar Linus " && lastName == "Holone") {
+            message = "Mitt navn er " + firstName + lastName
+        } else {
+            message = "Mitt navn er ikke " + firstName + lastName
+        }
+
+        document.getElementById("name").innerHTML = message
+
+        
+    </script>
+</body>
+</html>
