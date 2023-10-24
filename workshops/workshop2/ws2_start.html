@@ -25,7 +25,7 @@
                 <li><img src="icons/clock.svg"> <span id="duration">0</span></li>
             </ul>
         </section>
-        <img src="icons/c3_logo.svg" alt="Code Concept Collector" id="logo" class="hideable"/>
+        <img src="icons/c3_logo.svg" alt="Code Concept Collector" id="logo"/>
         <nav>
             <button id="notebookToggler"><img src="icons/notebook.svg" />Åpne kladdeboka <span class="shortcut">n</span></button>
             <button id="infoToggler">Info / Hvordan spille <span class="shortcut">i</span></button>
@@ -93,6 +93,30 @@
             loops: 5,
             functions: 3
         }
+
+        // Funksjon for å oppdatere en konfigurasjonsverdi
+        function changeConfigValue(config, value) {
+            if(config === "energy") {
+                gameConfig.energy = gameConfig.energy + value
+            }
+
+            if(config === "points") {
+                gameConfig.points = gameConfig.points + value
+            }
+
+            if(config === "duration") {
+                gameConfig.duration = gameConfig.duration + value
+            }
+
+            config === "variables" ? notebook.variables = notebook.variables = value : null
+            config === "arrays" ? notebook.arrays = notebook.arrays = value : null
+            config === "loops" ? notebook.loops = notebook.loops = value : null
+            config === "functions" ? notebook.functions = notebook.functions = value : null
+            
+            console.log(gameConfig.points)
+        }
+
+        changeConfigValue("points", -1)
 
         
 
